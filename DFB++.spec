@@ -2,7 +2,7 @@ Summary:	C++ binding for DirectFB
 Summary(pl):	Interfejs C++ do DirectFB
 Name:		DFB++
 Version:	0.9.20
-Release:	1
+Release:	2
 License:	LGPL v2+
 Group:		Libraries
 Source0:	http://www.directfb.org/download/DirectFB/%{name}-%{version}.tar.gz
