@@ -7,7 +7,7 @@ License:	LGPL v2+
 Group:		Libraries
 Source0:	http://www.directfb.org/download/DirectFB-extra/%{name}-%{version}.tar.gz
 # Source0-md5:	8184ade239bbdf93c5e31c71d1842133
-URL:		http://www.directfb.org/
+URL:		http://www.directfb.org/index.php?path=Development/Projects/DFB++
 BuildRequires:	DirectFB-devel >= 1:%{version}
 BuildRequires:	autoconf >= 2.52
 BuildRequires:	automake
