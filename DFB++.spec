@@ -58,6 +58,7 @@ Statyczna biblioteka DFB++.
 %setup -q
 
 %build
+cp -f /usr/share/automake/config.sub .
 %{__autoconf}
 %configure \
 	--enable-static
