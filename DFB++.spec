@@ -1,17 +1,18 @@
 Summary:	C++ binding for DirectFB
 Summary(pl):	Interfejs C++ do DirectFB
 Name:		DFB++
-Version:	0.9.20
-Release:	2
+Version:	0.9.21
+Release:	1
 License:	LGPL v2+
 Group:		Libraries
-Source0:	http://www.directfb.org/download/DirectFB/%{name}-%{version}.tar.gz
-# Source0-md5:	52a382bede1ef6ba041e0be8d73ff0a9
+Source0:	http://www.directfb.org/download/DirectFB-extra/%{name}-%{version}.tar.gz
+# Source0-md5:	8184ade239bbdf93c5e31c71d1842133
 URL:		http://www.directfb.org/
-BuildRequires:	DirectFB-devel >= %{version}
-BuildRequires:	autoconf
+BuildRequires:	DirectFB-devel >= 1:%{version}
+BuildRequires:	autoconf >= 2.52
 BuildRequires:	automake
 BuildRequires:	libstdc++-devel
+BuildRequires:	libtool >= 2:1.5
 BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -36,6 +37,8 @@ Summary:	DFB++ header files
 Summary(pl):	Pliki nag³ówkowe DFB++
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
+Requires:	DirectFB-devel >= 1:%{version}
+Requires:	libstdc++-devel
 
 %description devel
 Header files for DFB++ library.
@@ -59,8 +62,11 @@ Statyczna biblioteka DFB++.
 %setup -q
 
 %build
-cp -f /usr/share/automake/config.sub .
+%{__libtoolize}
+%{__aclocal}
 %{__autoconf}
+%{__autoheader}
+%{__automake}
 %configure \
 	--enable-static
 %{__make}
@@ -85,17 +91,17 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS ChangeLog README
 %attr(755,root,root) %{_bindir}/dfbshow
 %attr(755,root,root) %{_bindir}/dfbswitch
-%attr(755,root,root) %{_libdir}/lib*.so.*.*
+%attr(755,root,root) %{_libdir}/libdfb++-*.so.*.*.*
 
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/dfb++-config
-%attr(755,root,root) %{_libdir}/lib*.so
-%{_libdir}/lib*.la
+%attr(755,root,root) %{_libdir}/libdfb++.so
+%{_libdir}/libdfb++.la
 %{_includedir}/dfb++
 %{_pkgconfigdir}/*.pc
 %{_examplesdir}/%{name}-%{version}
 
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/lib*.a
+%{_libdir}/libdfb++.a
