@@ -1,12 +1,12 @@
 Summary:	C++ binding for DirectFB
 Summary(pl):	Interfejs C++ do DirectFB
 Name:		DFB++
-Version:	0.9.19
+Version:	0.9.20
 Release:	1
 License:	LGPL v2+
 Group:		Libraries
 Source0:	http://www.directfb.org/download/DirectFB/%{name}-%{version}.tar.gz
-# Source0-md5:	e0e93e2ab93b1eb8c9302add56206238
+# Source0-md5:	52a382bede1ef6ba041e0be8d73ff0a9
 URL:		http://www.directfb.org/
 BuildRequires:	DirectFB-devel >= %{version}
 BuildRequires:	autoconf
@@ -81,13 +81,15 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog README
+%attr(755,root,root) %{_bindir}/dfbshow
+%attr(755,root,root) %{_bindir}/dfbswitch
 %attr(755,root,root) %{_libdir}/lib*.so.*.*
 
 %files devel
 %defattr(644,root,root,755)
+%attr(755,root,root) %{_bindir}/dfb++-config
 %attr(755,root,root) %{_libdir}/lib*.so
 %{_libdir}/lib*.la
-%attr(755,root,root) %{_bindir}/dfb++-config
 %{_includedir}/dfb++
 %{_pkgconfigdir}/*.pc
 %{_examplesdir}/%{name}-%{version}
