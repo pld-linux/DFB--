@@ -10,6 +10,7 @@ Source0:	http://www.directfb.org/download/DirectFB/%{name}-%{version}.tar.gz
 URL:		http://www.directfb.org/
 BuildRequires:	DirectFB-devel >= %{version}
 BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	libstdc++-devel
 BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -34,7 +35,7 @@ zwraca b³±d, rzucany jest wyj±tek DFBException.
 Summary:	DFB++ header files
 Summary(pl):	Pliki nag³ówkowe DFB++
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Header files for DFB++ library.
@@ -46,7 +47,7 @@ Pliki nag³ówkowe biblioteki DFB++.
 Summary:	DFB++ static library
 Summary(pl):	Statyczna biblioteka DFB++
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 DFB++ static library.
