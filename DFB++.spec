@@ -21,7 +21,7 @@ argument of every interface function. Another feature is the usage of
 exceptions. It's annoying having these error checking stuff with
 growing deinitialization stacks. Most functions are 'void'. As soon as
 a DirectFB function returns an error a DFBException is thrown.
-		
+
 %description -l pl
 DFB++ jest interfejsem C++ do biblioteki DirectFB, u³atwiaj±cym jej
 u¿ywanie. Jedn± z zalet jest brak konieczno¶ci przekazywania 'thiz'
