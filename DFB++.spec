@@ -28,7 +28,7 @@ a DirectFB function returns an error a DFBException is thrown.
 DFB++ jest interfejsem C++ do biblioteki DirectFB, u³atwiaj±cym jej
 u¿ywanie. Jedn± z zalet jest brak konieczno¶ci przekazywania 'thiz'
 jako pierwszego parametru ka¿dej funkcji. Kolejn± jest korzystanie z
-wyj±tków. Ci±g³e sprawdzanie b³êdów z powiêkszaj±cym stosem
+wyj±tków. Ci±g³e sprawdzanie b³êdów z powiêkszaj±cym siê stosem
 deinicjalizacji mo¿e byæ dokuczliwe. W DFB++, kiedy funkcja DirectFB
 zwraca b³±d, rzucany jest wyj±tek DFBException.
 
