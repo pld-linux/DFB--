@@ -39,7 +39,6 @@ Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	DirectFB-devel >= 1:%{version}
 Requires:	libstdc++-devel
-Requires:	pkgconfig
 
 %description devel
 Header files for DFB++ library.
