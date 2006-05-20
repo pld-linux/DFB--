@@ -1,12 +1,12 @@
 Summary:	C++ binding for DirectFB
 Summary(pl):	Interfejs C++ do DirectFB
 Name:		DFB++
-Version:	0.9.23
+Version:	0.9.25
 Release:	1
 License:	LGPL v2+
 Group:		Libraries
 Source0:	http://www.directfb.org/download/DirectFB-extra/%{name}-%{version}.tar.gz
-# Source0-md5:	14cd1de1105e1eeb0349f672c74f41c0
+# Source0-md5:	1f85d59466f1ec2d9c68b29bc5debb03
 URL:		http://www.directfb.org/index.php?path=Development/Projects/DFB++
 BuildRequires:	DirectFB-devel >= 1:%{version}
 BuildRequires:	autoconf >= 2.52
