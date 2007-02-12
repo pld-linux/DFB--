@@ -1,5 +1,5 @@
 Summary:	C++ binding for DirectFB
-Summary(pl.UTF-8):   Interfejs C++ do DirectFB
+Summary(pl.UTF-8):	Interfejs C++ do DirectFB
 Name:		DFB++
 Version:	0.9.25
 Release:	1
@@ -34,7 +34,7 @@ zwraca błąd, rzucany jest wyjątek DFBException.
 
 %package devel
 Summary:	DFB++ header files
-Summary(pl.UTF-8):   Pliki nagłówkowe DFB++
+Summary(pl.UTF-8):	Pliki nagłówkowe DFB++
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	DirectFB-devel >= 1:%{version}
@@ -48,7 +48,7 @@ Pliki nagłówkowe biblioteki DFB++.
 
 %package static
 Summary:	DFB++ static library
-Summary(pl.UTF-8):   Statyczna biblioteka DFB++
+Summary(pl.UTF-8):	Statyczna biblioteka DFB++
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
