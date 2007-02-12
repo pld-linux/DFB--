@@ -1,5 +1,5 @@
 Summary:	C++ binding for DirectFB
-Summary(pl):	Interfejs C++ do DirectFB
+Summary(pl.UTF-8):   Interfejs C++ do DirectFB
 Name:		DFB++
 Version:	0.9.25
 Release:	1
@@ -24,17 +24,17 @@ exceptions. It's annoying having these error checking stuff with
 growing deinitialization stacks. Most functions are 'void'. As soon as
 a DirectFB function returns an error a DFBException is thrown.
 
-%description -l pl
-DFB++ jest interfejsem C++ do biblioteki DirectFB, u≥atwiaj±cym jej
-uøywanie. Jedn± z zalet jest brak konieczno∂ci przekazywania 'thiz'
-jako pierwszego parametru kaødej funkcji. Kolejn± jest korzystanie z
-wyj±tkÛw. Ci±g≥e sprawdzanie b≥ÍdÛw z powiÍkszaj±cym siÍ stosem
-deinicjalizacji moøe byÊ dokuczliwe. W DFB++, kiedy funkcja DirectFB
-zwraca b≥±d, rzucany jest wyj±tek DFBException.
+%description -l pl.UTF-8
+DFB++ jest interfejsem C++ do biblioteki DirectFB, u≈ÇatwiajƒÖcym jej
+u≈ºywanie. JednƒÖ z zalet jest brak konieczno≈õci przekazywania 'thiz'
+jako pierwszego parametru ka≈ºdej funkcji. KolejnƒÖ jest korzystanie z
+wyjƒÖtk√≥w. CiƒÖg≈Çe sprawdzanie b≈Çƒôd√≥w z powiƒôkszajƒÖcym siƒô stosem
+deinicjalizacji mo≈ºe byƒá dokuczliwe. W DFB++, kiedy funkcja DirectFB
+zwraca b≈ÇƒÖd, rzucany jest wyjƒÖtek DFBException.
 
 %package devel
 Summary:	DFB++ header files
-Summary(pl):	Pliki nag≥Ûwkowe DFB++
+Summary(pl.UTF-8):   Pliki nag≈Ç√≥wkowe DFB++
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	DirectFB-devel >= 1:%{version}
@@ -43,19 +43,19 @@ Requires:	libstdc++-devel
 %description devel
 Header files for DFB++ library.
 
-%description devel -l pl
-Pliki nag≥Ûwkowe biblioteki DFB++.
+%description devel -l pl.UTF-8
+Pliki nag≈Ç√≥wkowe biblioteki DFB++.
 
 %package static
 Summary:	DFB++ static library
-Summary(pl):	Statyczna biblioteka DFB++
+Summary(pl.UTF-8):   Statyczna biblioteka DFB++
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 DFB++ static library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna biblioteka DFB++.
 
 %prep
