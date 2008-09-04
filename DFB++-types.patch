@@ -1,0 +1,22 @@
+--- DFB++-1.2.0/include/idirectfbvideoprovider.h.orig	2008-06-09 16:48:14.000000000 +0200
++++ DFB++-1.2.0/include/idirectfbvideoprovider.h	2008-09-04 07:40:10.820987309 +0200
+@@ -68,7 +68,7 @@ public:
+      float                        GetVolume             ();
+ 
+ 
+-     void                         SetStreamAttributes   (DFBStreamDescription        attr);
++     void                         SetStreamAttributes   (DFBStreamAttributes         attr);
+ 
+      void                         SetAudioOutputs       (DFBVideoProviderAudioUnits *audioUnits);
+      DFBVideoProviderAudioUnits   GetAudioOutputs       ();
+--- DFB++-1.2.0/dfb++/idirectfbvideoprovider.cpp.orig	2008-06-09 16:56:10.000000000 +0200
++++ DFB++-1.2.0/dfb++/idirectfbvideoprovider.cpp	2008-09-04 07:39:46.584988985 +0200
+@@ -165,7 +165,7 @@ float IDirectFBVideoProvider::GetVolume 
+      return level;
+ }
+ 
+-void IDirectFBVideoProvider::SetStreamAttributes (DFBStreamDescription attr)
++void IDirectFBVideoProvider::SetStreamAttributes (DFBStreamAttributes attr)
+ {
+      DFBCHECK( iface->SetStreamAttributes (iface, attr) );
+ }
