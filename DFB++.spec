@@ -8,7 +8,7 @@ Group:		Libraries
 Source0:	http://www.directfb.org/downloads/Extras/%{name}-%{version}.tar.gz
 # Source0-md5:	80b94caff14e2e59be762cad8018e655
 Patch0:		%{name}-types.patch
-URL:		http://www.directfb.org/index.php?path=Development/Projects/DFB++
+URL:		http://www.directfb.org/index.php?path=Projects/DFB%2B%2B
 BuildRequires:	DirectFB-devel >= 1:%{version}
 BuildRequires:	autoconf >= 2.52
 BuildRequires:	automake
