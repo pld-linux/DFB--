@@ -1,12 +1,13 @@
 Summary:	C++ binding for DirectFB
 Summary(pl.UTF-8):	Interfejs C++ do DirectFB
 Name:		DFB++
-Version:	1.0.0
+Version:	1.2.0
 Release:	1
 License:	LGPL v2+
 Group:		Libraries
 Source0:	http://www.directfb.org/downloads/Extras/%{name}-%{version}.tar.gz
-# Source0-md5:	c7d0b98bcc648a25ff11bfc74635f4ca
+# Source0-md5:	80b94caff14e2e59be762cad8018e655
+Patch0:		%{name}-types.patch
 URL:		http://www.directfb.org/index.php?path=Development/Projects/DFB++
 BuildRequires:	DirectFB-devel >= 1:%{version}
 BuildRequires:	autoconf >= 2.52
@@ -60,6 +61,7 @@ Statyczna biblioteka DFB++.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %{__libtoolize}
@@ -78,7 +80,7 @@ install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-install examples/simple.cpp $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
+install examples/*.cpp $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -91,7 +93,8 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS ChangeLog README
 %attr(755,root,root) %{_bindir}/dfbshow
 %attr(755,root,root) %{_bindir}/dfbswitch
-%attr(755,root,root) %{_libdir}/libdfb++-*.so.*.*.*
+%attr(755,root,root) %{_libdir}/libdfb++-1.2.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libdfb++-1.2.so.0
 
 %files devel
 %defattr(644,root,root,755)
@@ -99,7 +102,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/libdfb++.so
 %{_libdir}/libdfb++.la
 %{_includedir}/dfb++
-%{_pkgconfigdir}/*.pc
+%{_pkgconfigdir}/dfb++.pc
 %{_examplesdir}/%{name}-%{version}
 
 %files static
